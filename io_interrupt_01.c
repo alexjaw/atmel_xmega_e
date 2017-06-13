@@ -2,6 +2,7 @@
  * io_interrupt_01.c
  *
  * Control an LED with a button through interrupts
+ * Device ATxmega8e5 (AtmelStudio7 simulation was used as debugger/programmer tool)
  * Some refs:
  * - xmegae manual http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42005-8-and-16-bit-AVR-Microcontrollers-XMEGA-E_Manual.pdf
  * - AVR1305 http://www.atmel.com/Images/doc8043.pdf
