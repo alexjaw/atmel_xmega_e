@@ -35,7 +35,10 @@ int main(void)
 	/* The CLKSEL bits in CTRLA is used to set the clock source for the counter 
 	* see AVR1500 for details about gc, configuration masks.
 	* 1MHz / 64 -> 1 tick every 64us. 156 (0x9c) such ticks for every 10ms (100Hz).
-	* 100 Hz is fast enough to make flickering invisible for the human eye*/
+	* 100 Hz is fast enough to make flickering invisible for the human eye
+	*
+	* For start/stop of the timer see also:
+	* CTRLGCLR/CTRLGSET – Control Register G Clear/Set, chapter 13.12.8 in the xmega e manual*/
 	TCC0.CTRLA = ( TCC0.CTRLA & ~TC0_CLKSEL_gm ) | TC_CLKSEL_DIV64_gc;  // Start Timer with prescaling 64
 
 	/* In PWM this controls the period
